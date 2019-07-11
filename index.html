@@ -1,0 +1,454 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - Dan Widrich Portfolio Page</title>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css' '>
+<style>
+      /*classes for experimenting with links and positioning */
+.pblocktext {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.alignR {
+  text-align: right;
+}
+
+/* semi-simple gradient color backgrounds*/
+.white2black {
+background-image: linear-gradient(to right, #ffffff, #e5e5e5, #cccccc, #b2b2b2, #999999, #7f7f7f, #666666, #4c4c4c, #333333, #191919, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000);
+}
+
+.black2white {
+  background-image: linear-gradient(to left, #ffffff, #e5e5e5, #cccccc, #b2b2b2, #999999, #7f7f7f, #666666, #4c4c4c, #333333, #191919, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000);
+}
+
+.danMountain {
+  background-image: url("https://c3.staticflickr.com/8/7563/27365288642_5d0f4be051_b.jpg");
+  background-repeat: no-repeat;        
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-position: center center; 
+  background-size: cover;
+  opacity: 1;
+}
+
+/* flickr image of B&W trees looking up into canopy */
+.treeCanopy {
+  background-image: url("https://c6.staticflickr.com/6/5514/11753006925_22aa0e5dbf_z.jpg");
+  background-repeat: no-repeat;        
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-position: center center; 
+  background-size: cover;
+  opacity: .5;
+}
+
+.testBackground3 {
+  background-image: radial-gradient(rgba(0,0,0,1), rgba(0,0,255,.5));
+  opacity: .7; 
+}
+
+.roundedImage {
+  border-radius: 50%;
+  width: 85%;
+  opacity: 1;
+  background-position: center;
+}
+
+.radialGradient {
+  background: radial-gradient(black, grey);
+}
+
+.blackBackground {
+  background-color: #000000;
+}
+
+.whiteBackground {
+  background-color: #ffffff;
+}
+
+.textLeft {
+  text-align: left;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.textRight {
+  text-align: right;
+}
+
+.orbitron {
+  font-family: orbitron;
+}
+
+.league {
+  font-family: league;
+}
+
+/* this element is used to exclude styles on small screens which, for whatever reason, are not compatible with functional capabilities */
+@media screen and (min-width: 1025px) {
+  .LRGwhite2black {
+    background-image: linear-gradient(to right, #ffffff, #e5e5e5, #cccccc, #b2b2b2, #999999, #7f7f7f, #666666, #4c4c4c, #333333, #191919, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000);
+  }
+  
+  .LRGPowerOn {
+  background-image: url("http://c3.staticflickr.com/8/7344/27309955754_7a530320f8_m.jpg");
+  background-repeat: no-repeat;        
+  background-position: center center; 
+  background-size: 25%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  opacity: 1;
+}
+
+  .LRGgradientText {
+    font-size: 4em;
+    background: -webkit-linear-gradient(left, #7b90ab, #7b90ab, #d56d28, #7b90ab, #7b90ab), transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.3;
+    background: -o-linear-gradient(left, #7b90ab, #7b90ab, #d56d28, #7b90ab, #7b90ab);
+    background: -moz-linear-gradient(left, #7b90ab, #7b90ab, #d56d28, #7b90ab, #7b90ab);
+    background: linear-gradient(left, #7b90ab, #7b90ab, #d56d28, #7b90ab, #7b90ab);
+  }
+  
+  .LRGgradientText2 {
+    font-size: 2em;
+    background: -webkit-linear-gradient(left, #7b90ab, #7b90ab, #d56d28, #7b90ab, #7b90ab), transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.3;
+    background: -o-linear-gradient(left, #7b90ab, #7b90ab, #d56d28, #7b90ab, #7b90ab);
+    background: -moz-linear-gradient(left, #7b90ab, #7b90ab, #d56d28, #7b90ab, #7b90ab);
+    background: linear-gradient(left, #7b90ab, #7b90ab, #d56d28, #7b90ab, #7b90ab);
+  }
+  
+  .LRGgradientText3 {
+    font-size: 2em;
+    background: -webkit-linear-gradient(left, #d56d28, #d56d28, #7b90ab, #d56d28, #d56d28), transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.3;
+    background: -o-linear-gradient(left, #d56d28, #d56d28, #7b90ab, #d56d28, #d56d28);
+    background: -moz-linear-gradient(left, #d56d28, #d56d28, #7b90ab, #d56d28, #d56d28);
+    background: linear-gradient(left, #d56d28, #d56d28, #7b90ab, #d56d28, #d56d28);
+  }
+  
+  .LRGpText {
+    color: #7b90ab;
+  }
+  
+  .LRGheadingTextOrange {
+    color: #d56d28;
+    font-size: 4em;
+  }
+  
+  .LRGphotoDisappear {
+    height: 0px;
+    width: 0px;
+    z-index: -1;
+  }
+  
+  .LRGorange {
+    color: #d56d28;
+  }
+  
+  .LRGred {
+    color: #ff0000;
+  }
+  
+  .LRGblue {
+    color: #7b90ab;
+  }
+  
+  .LRGblue3em {
+    color: #7b90ab;
+    font-size: 3em;
+  }
+  
+  .LRGblack {
+    color: black;
+  }
+  
+  .LRGheight250 {
+    height: 250px;
+  }
+  
+  /* border style for experimenting and for practical implication */
+    .thin-red-border {
+    border-color: #d56d28;
+    border-width: 5px;
+    border-style: solid;
+  }
+  
+  .thin-blue-border {
+    border-color: #7b90ab;
+    border-width: 5px;
+    border-style: solid;
+  }
+
+  .LRGportfolioImage {
+    position: relative;
+    height: 300px;
+    width: 450px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
+  
+ 
+  
+}
+
+/* This defines properties exclusive for small screens  */
+@media screen and (max-width: 1024px) {
+.XSportfolioImage {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ } 
+  
+  .MobilePowerOn {
+  background-image: url("http://c3.staticflickr.com/8/7344/27309955754_7a530320f8_m.jpg");
+  background-repeat: no-repeat;        
+  background-position: center center; 
+  background-size: 25%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  opacity: 1;
+}
+
+  .mobileTextWhite {
+  color: #ffffff;
+  font-family: orbitron;
+  }
+  
+  .mobileTextOrange {
+    color: #d56d28;
+    font-family: orbitron;
+  }
+  
+  .mobileTextBlue {
+    color: #7b90ab;
+    
+  }
+  
+  .mobileTextCenter {
+    text-align: center;
+  }
+  
+  .mobilewhite2black {
+  background-image: linear-gradient(to right, #ffffff, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000,   #000000);
+  }
+  
+  .mobileMarginTop15 {
+    margin-top: 15%;
+  }
+  
+  .mobileMarginTop10 {
+    margin-top: 10%;
+  }
+  
+  .mobileMarginTop5 {
+    margin-top: 5%;
+  }
+  .mobileBlkBack {
+  background-color: #000000;
+  }
+  
+  .mobileGreyBack {
+    background-color: #cccccc;
+  }
+  
+  .mobilePhotoDisappear {
+    height: 0px;
+    width: 0px;
+    z-index: -1;
+  }
+  
+   .mobilethin-white-border {
+    border-color: #ffffff;
+    border-width: 5px;
+    border-style: solid;
+  }
+  
+  .mobilethin-orange-border {
+    border-color: #d56d28;
+    border-width: 5px;
+    border-style: solid;
+  }
+  
+  .mobilethin-blue-border {
+    border-color: #7b90ab;
+    border-width: 5px;
+    border-style: solid;
+  }
+  
+  
+}
+    </style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<div class="container-fluid">
+<nav class="navbar-fixed-top mobilethin-blue-border mobileBlkBack" role="navigation">
+<p class="mobileTextCenter">
+<a href="#Bio"><span class="LRGorange mobileTextBlue"><u>Bio</u></span></a>
+<span class="LRGblue mobileTextOrange"> ||</span>
+<a href="#ProjectsAndSolutions"><span class="LRGorange mobileTextBlue"><u>Projects and Solutions</u></span></a>
+<span class="LRGblue mobileTextOrange"> ||</span>
+<a href="#Contact"><span class="LRGorange mobileTextBlue"><u>Contact</u></span></a>
+</p>
+</nav>
+<body class="mobileBlkBack LRGwhite2black">
+
+<div class="row mobileMarginTop15">
+<div class="col-md-6"></div>
+<div class="col-md-6 thin-blue-border LRGheadingTextOrange orbitron" style="position: relative; right: 20px;">
+<p class="textLeft mobileTextOrange">Daniel Widrich</p>
+<p class="textRight mobileTextOrange">Web Development Portfolio</p>
+</div>
+</div>
+
+
+<img style="margin-top: 6%;" src="https://c3.staticflickr.com/8/7442/27364629922_aa1a62a62a_h.jpg" width=100%></img>
+
+
+<div class="row" style="margin-top: 6%;"><a name="Bio"></a>
+<div class="col-md-6" style="text-align:center; margin-top: 6%;"><img class="roundedImage mobileMarginTop10 LRGphotoDisappear" src="https://c8.staticflickr.com/8/7464/27753477455_23808b3163_h.jpg"><img class="roundedImage mobileMarginTop10 mobilePhotoDisappear" src="https://c8.staticflickr.com/8/7464/27753477455_23808b3163_h.jpg"></div>
+<div class="col-md-1"></div>
+<div class="col-md-4 thin-red-border" style="margin-top: 6%; margin-bottom: 3%;">
+<p class="LRGpText mobileTextBlue">Hi, I'm Dan.</p>
+<p class="LRGpText mobileTextBlue">Software Engineer with 9 years of experience performing geospatial database analysis. I began studying programming in 2013 with Python and later joined <a class="underline" href="https://freecodecamp.com">freeCodeCamp.com</a> for my front-end development certification which I completed in November of 2016. I am currently studying Java and will be finishing a 10-week boot camp in early June.</p>
+<p class="LRGpText mobileTextBlue">Writing code is a game to me: a series of integrated puzzles requiring simple yet elegant solutions -- each one deepening and enhancing my fascination and joy of playing.</p>
+<p class="LRGpText mobileTextBlue">Below you will find links to some of my projects. I hope you enjoy exploring and look forward to our connection.</p>
+<p class="LRGpText mobileTextBlue">- Dan</p>
+</div>
+<div class="col-md-1"></div>
+</div>
+
+
+<img style="margin-top: 6%;" src="https://c3.staticflickr.com/8/7442/27364629922_aa1a62a62a_h.jpg" width=100%></img>
+
+<div class="row " style="margin-top: 6%;"><a name="ProjectsAndSolutions"></a>
+<div class="col-md-6"></div>
+<div class="col-md-6">
+<div class="col-md-10  thin-blue-border LRGheadingTextOrange orbitron mobileTextBlue mobilethin-orange-border  mobileMarginTop5">
+<p style="text-align:right;">Projects</p>
+<p style="text-align:center;">and</p>
+<p style="text-align:left;">Solutions</p></div>
+<div class="col-md-2"></div>
+</div>
+</div>
+
+<div style="margin-bottom: 6%;">
+<div class="row" style="margin-top: 6%;">
+<div class="col-md-6"><a href="https://codepen.io/Daniel_Widrich/full/yamwzG/"><img class="LRGportfolioImage XSportfolioImage" src="//c1.staticflickr.com/5/4160/33670142284_f091d7acb9_b.jpg"></a>
+</div>
+<div class="col-md-6"><p class="LRGpText mobileTextBlue pblocktext XSportfolioImage">Objective: Build a <u>SIMON Game</u> that meets the following user stories: User Story: I am presented with a random series of button presses. Each time I input a series of button presses correctly, I see the same series of button presses but with an additional step. I hear a sound that corresponds to each button both when the series of button presses plays, and when I personally press a button. If I press the wrong button, I am notified that I have done so, and that series of button presses starts again to remind me of the pattern so I can try again. I can see how many steps are in the current series of button presses. If I want to restart, I can hit a button to do so, and the game will return to a single step. I can play in strict mode where if I get a button press wrong, it notifies me that I have done so, and the game restarts at a new random series of button presses. I can win the game by getting a series of 20 steps correct. I am notified of my victory, then the game starts over.</div>
+</div>
+<div class="row" style="margin-top: 6%;">
+<div class="col-md-6"><a href="https://codepen.io/Daniel_Widrich/full/ZpqEkz/"><img class="LRGportfolioImage XSportfolioImage" src="https://c1.staticflickr.com/5/4159/33670141484_2717825aa1_b.jpg"></a>
+</div>
+<div class="col-md-6"><p class="LRGpText mobileTextBlue pblocktext XSportfolioImage">Objective: Build a <u>Tic-Tac-Toe game</u> that meets the following user stories: I can play a game of Tic Tac Toe with the computer. My game will reset as soon as it's over so I can play again. I can choose whether I want to play as X or O.</div>
+</div>
+<div class="row" style="margin-top: 6%;">
+<div class="col-md-6"><a href="https://codepen.io/Daniel_Widrich/full/BLJVQv/"><img class="LRGportfolioImage XSportfolioImage" src="https://c1.staticflickr.com/5/4168/33670142644_cf5be5725e_b.jpg"></a>
+</div>
+<div class="col-md-6"><p class="LRGpText mobileTextBlue pblocktext XSportfolioImage">Objective: Build a <u>JavaScript Calculator</u> which meets the following user stories: I can add, subtract, multiply and divide two numbers. I can clear the input field with a clear button. I can keep chaining mathematical operations together until I hit the equal button, and the calculator will tell me the correct output.
+</div>
+</div>
+<div class="row" style="margin-top: 6%;">
+<div class="col-md-6"><a href="https://codepen.io/Daniel_Widrich/full/GjdXzk/"><img class="LRGportfolioImage XSportfolioImage" src="https://c1.staticflickr.com/5/4159/33670142684_a26f9dd092_n.jpg"></a>
+</div>
+<div class="col-md-6"><p class="LRGpText mobileTextBlue pblocktext XSportfolioImage">Objective: Build a <u>Pomodoro Clock</u> which meets the following user stories: I can start a 25 minute pomodoro, and the timer will go off once 25 minutes has elapsed. I can reset the clock for my next pomodoro. I can customize the length of each pomodoro.
+</div>
+</div>
+<div class="row" style="margin-top: 6%;">
+<div class="col-md-6"><a href="https://codepen.io/Daniel_Widrich/full/BzroJv/"><img class="LRGportfolioImage XSportfolioImage" src="https://c1.staticflickr.com/5/4162/33670142344_d411f89265_n.jpg"></a>
+</div>
+<div class="col-md-6"><p class="LRGpText mobileTextBlue pblocktext XSportfolioImage">Objective: Build a <u>Random Quote Machine</u> which meets the following user stories: I can click a button to show me a new random quote. I can press a button to tweet out a quote.
+</div>
+</div>
+<div class="row" style="margin-top: 6%;">
+<div class="col-md-6"><a href="https://codepen.io/Daniel_Widrich/full/yVaXXZ/"><img class="LRGportfolioImage XSportfolioImage" src="https://c1.staticflickr.com/5/4180/33670142564_9fde473d56_b.jpg"></a>
+</div>
+<div class="col-md-6"><p class="LRGpText mobileTextBlue pblocktext XSportfolioImage">Objective: Build a <u>Simple Note Pad App</u> using React.js. This app should allow the user to add notes, edit the note text, update and save edits to text, and delete notes.
+</div>
+</div>
+<div class="row" style="margin-top: 6%;">
+<div class="col-md-6"><a href="https://codepen.io/Daniel_Widrich/full/KzWXdL/"><img class="LRGportfolioImage XSportfolioImage" src="https://c8.staticflickr.com/8/7303/27777312815_a9326778bb_b.jpg"></a>
+</div>
+<div class="col-md-6"><p class="LRGpText mobileTextBlue pblocktext XSportfolioImage">This is the infamous Andres Marie Amphere tribute page. It pays homage to a great man of science, a man of the age of enlightenment. Just thinking about ole Andre gets me all Amped up.
+</div>
+</div>
+</div>
+
+<img style="margin-top: 6%;" src="https://c3.staticflickr.com/8/7442/27364629922_aa1a62a62a_h.jpg" width=100%></img>
+
+
+<div class="row" style="margin-top: 6%;">
+<div class="col-md-6"></div>
+<div class="col-md-6">
+<div class="col-md-10 LRGPowerOn MobilePowerOn orbitron mobileTextBlue mobilethin-orange-border thin-red-border mobileMarginTop5"><a name="Contact"></a>
+<p class="LRGblue3em" style="text-align:left;">Contact</p>
+<p style="text-align:center;"><br></p>
+<p class="LRGblue3em" style="text-align:right;">Details</p>
+</div>
+<div class="col-md-2"></div>
+</div>
+</div>
+
+<div class="row" style="margin-top: 6%;">
+<div class="col-md-4">
+
+</div>
+<div class="col-md-4">
+<div class="well radialGradient LRGheight250"><p class="LRGgradientText2 textCenter mobileTextBlue">My Contact Info:</p>
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-11">
+<p class="LRGorange mobileTextOrange">
+First Name: Daniel<br>
+Last Name: Widrich<br>
+Location: Denver, CO<br>
+Email: Daniel_Widrich@yahoo.com
+</p>
+</div>
+</div>
+</div>
+<div class="col-md-4"></div>
+</div>
+<div class="col-md-4"></div>
+</body>
+</div>
+</body>
+</html>
